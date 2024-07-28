@@ -1,10 +1,17 @@
 import React from 'react'
-
+import Home from './Screens/Home'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import Login from './Screens/Login'
 const App = () => {
   return (
-    <div className='fs-1'>
-      
+    <Router>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </div>
+    </Router>
   )
 }
 
